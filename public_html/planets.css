@@ -1,0 +1,45 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 28, 2016, 11:36:25 PM
+    Author     : premy
+*/
+
+.planets
+{
+  overflow: hidden;
+}
+
+.planets div
+{
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.planet
+{
+  
+}
+
+.sun
+{
+  /*
+  background-image: url("textures/sun.jpg");
+  background-size: 150px;
+  */
+  background: repeating-radial-gradient(yellow, orange, yellow);
+}
+
+.earth
+{
+  background: radial-gradient(green, blue);
+}
+
+.moon
+{
+  background-color: gray;
+}

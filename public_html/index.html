@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+  <head>
+    <title>Solar system</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.1.1.js" type="text/javascript"></script>
+    <script src="jsDraw2D_Uncompressed.js" type="text/javascript"></script>
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
+    <link href="planets.css" rel="stylesheet" type="text/css"/>
+    <script src="script.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="copyright">
+          Copyright 2016 - Premysl Stastny
+        </div>
+    <div class="settings_panel" id="settings_panel">
+      <div class="label">
+        <div class="title">Solar system</div>
+      </div>
+      <div id="settings" class="settings">
+        <div class="set_title">
+          Settings
+        </div>
+        <label class="setting" for="time_speed">
+          Time multiplicator
+        </label>
+        <input type="checkbox" id="time_speed">
+        <div class="subsetting inputsubsetting">
+          <input type="text" id="time_multiplicator" onchange="time_speed_change()">
+        </div>
+
+      
+                
+        
+        <label class="setting" for="scheme">  
+          Accuracy -CPS
+        </label>
+        <input type="checkbox" id="scheme">
+        <div class="subsetting inputsubsetting" id="dcps" onchange="cps_change()">
+          <input type="text" id="cps">
+        </div>
+        <div class="subsetting" id="Accurancy_text">
+          This number determines accuracy of numeric solving of set of differential equations; number of time steps in seconds. Too big value will slow animation.
+        </div>
+        
+        <label class="setting" for="AR_object">
+          Add/remove object
+        </label>
+        <input type="checkbox" id="AR_object">
+        <div class="subsetting">
+          The most intelligent thing
+        </div>
+        
+        <label class="setting" for="projection">
+          Projection staff
+        </label>
+        <input type="checkbox" id="projection">
+        <div class="subsetting" id="projection_out">
+          Translation: N/A </br>
+            Scale: N/A
+        </div>
+        
+        <label class="setting" for="Planets">
+          Planets staff
+        </label>
+        <input type="checkbox" id="Planets">
+        <div class="subsetting" id="Planets_out">
+        </div>
+        
+        
+      </div>
+    </div>
+    <div class="screen" id ="screen" onmousemove="_translate()">
+      <div class="planets" id="planets">
+        
+      </div>
+    </div>
+  </body>
+</html>
